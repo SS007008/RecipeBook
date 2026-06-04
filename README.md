@@ -44,6 +44,9 @@ The app follows MVVM architecture and allows users to discover recipes, browse c
 - Users can continue browsing cached recipes even when offline
 - Improved user experience during network unavailability
 
+### Theme Support
+- Supports both Light and Dark themes based on device settings
+
 ### Data Handling
 - Fetches recipes from Spoonacular API
 - Handles missing or invalid recipe images gracefully
