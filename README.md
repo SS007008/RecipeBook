@@ -9,6 +9,7 @@ The app allows users to discover recipes, browse categories, search recipes, vie
 - Browse recipes from Spoonacular API
 - Beautiful recipe cards with images
 - Loading states
+- Offline access to previously loaded recipes
 
 ### Search
 - Search recipes by name
@@ -36,6 +37,11 @@ The app allows users to discover recipes, browse categories, search recipes, vie
 - Save recipes locally
 - Remove recipes from favorites
 - Offline access using Room Database
+
+### Offline Support
+- Previously fetched recipes remain available without internet connection
+- Favorite recipes are stored locally using Room Database
+- Improved user experience during network unavailability
 
 ### Data Handling
 - Fetches recipes from Spoonacular API
@@ -122,11 +128,14 @@ SPOONACULAR_API_KEY=YOUR_API_KEY
 
 ## Future Improvements
 
-- Dark/Light theme switch
-- User accounts
-- Recipe sharing
-- Meal planner
-- Offline recipe caching
+- User accounts and personalized recipe collections
+- Recipe sharing functionality
+- Meal planner and weekly meal scheduling
+- Vegetarian / Non-Vegetarian filtering in category recipes
+- Sort favorite recipes by newest or oldest added
+- Toast notifications when recipes are added to or removed from favorites
+- Advanced recipe filtering options
+- Recently viewed recipes history
 
 ## Author
 
