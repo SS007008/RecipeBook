@@ -1,7 +1,7 @@
 # RecipeBook 🍽️
 
 RecipeBook is a modern Android recipe application built using Kotlin and Jetpack Compose.
-The app allows users to discover recipes, browse categories, search recipes, view detailed cooking instructions, nutritional information, and save favorite recipes for offline access.
+The app follows MVVM architecture and allows users to discover recipes, browse categories, search recipes, view detailed cooking instructions, nutritional information, and save favorite recipes, and previously fetched recipes offline.
 
 ## Features
 
@@ -41,6 +41,7 @@ The app allows users to discover recipes, browse categories, search recipes, vie
 ### Offline Support
 - Previously fetched recipes remain available without internet connection
 - Favorite recipes are stored locally using Room Database
+- Users can continue browsing cached recipes even when offline
 - Improved user experience during network unavailability
 
 ### Data Handling
