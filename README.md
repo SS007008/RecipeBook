@@ -95,8 +95,8 @@ The app follows MVVM architecture and allows users to discover recipes, browse c
 ### Search Feature
 ![Search Feature](RecipeBook_Search_State.jpeg)
 
-### Recipe Detail Screen
-![Recipe Detail](RecipeBook_Detailed_Screen.jpeg)
+### Recipe Ingredients 
+![Ingredients](RecipeBook_Detailed_Screen.jpeg)
 
 ### Recipe Instructions
 ![Instructions](RecipeBook_Detailed_Screen_Instructions.jpeg)
