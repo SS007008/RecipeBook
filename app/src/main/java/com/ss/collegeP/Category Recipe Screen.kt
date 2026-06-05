@@ -151,7 +151,10 @@ fun CategoryRecipeScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .aspectRatio(1f),
-                            contentScale = ContentScale.Crop
+                            contentScale = ContentScale.Crop,
+                            onError = {
+                                viewModel.removeBrokenRecipe(id = recipe.id)
+                            }
                         )
 
 //                    Gradient Overlay
