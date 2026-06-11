@@ -81,7 +81,7 @@ fun CategoryRecipeScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            IconButton(onClick = { navigateBack() }) {
+            IconButton(onClick = navigateBack) {
                 Icon(
                     painter = painterResource(id = R.drawable.arrow_back),
                     contentDescription = "back"

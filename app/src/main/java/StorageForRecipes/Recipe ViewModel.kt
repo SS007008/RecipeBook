@@ -30,62 +30,6 @@ class RecipeViewModel(
 //    private val _categoriesState = mutableStateOf(MainViewModel.RecipeState())
     val gson = Gson()
 
-    /**
-    fun addToFavourite(recipe :  Recipe){
-        viewModelScope.launch {
-
-            val entity = RecipeEntity(
-                id = recipe.id,
-                name = recipe.name,
-                image = recipe.image,
-//                ingredients = recipe.ingredients,
-//                instructions = recipe.instructions,
-//                mealType = recipe.mealType,
-                readyInMinutes = recipe.readyInMinutes,
-                isVeg = recipe.isVeg,
-                isFavorite = recipe.isFavorite,
-                calories = recipe.calories,
-                protein = recipe.protein,
-                carbs = recipe.carbs,
-                fat = recipe.fat,
-                ingredientsJson = gson.toJson(recipe.ingredients),
-                instructionsJson = gson.toJson(recipe.instructions),
-                favouriteTimeStamp = System.currentTimeMillis()
-            )
-
-            repository.add(recipe = entity)
-        }
-    }
-
-
-
-    fun removeFromFavourite(recipe : Recipe){
-        viewModelScope.launch {
-
-            val entity = RecipeEntity(
-                id = recipe.id,
-                name = recipe.name,
-                image = recipe.image,
-//                ingredients = recipe.ingredients,
-//                instructions = recipe.instructions,
-//                mealType = recipe.mealType,
-                readyInMinutes = recipe.readyInMinutes,
-                isVeg = recipe.isVeg,
-                isFavorite = recipe.isFavorite,
-                calories = recipe.calories,
-                protein = recipe.protein,
-                carbs = recipe.carbs,
-                fat = recipe.fat,
-                ingredientsJson = gson.toJson(recipe.ingredients),
-                instructionsJson = gson.toJson(recipe.instructions),
-                favouriteTimeStamp = System.currentTimeMillis()
-            )
-
-            repository.remove(recipe = entity)
-        }
-    }
-    */
-
     fun toggleFavorite(recipe : Recipe){
         viewModelScope.launch {
             repository.updateFavourite(
@@ -101,6 +45,8 @@ class RecipeViewModel(
             gson.fromJson(ingredientsJson, Array<String>::class.java).toList()
         val instructionsList : List<String> =
             gson.fromJson(instructionsJson, Array<String>::class.java).toList()
+        val dishTypes : List<String> =
+            gson.fromJson(dishTypesJson, Array<String>::class.java).toList()
 
         return Recipe(
             id = id,
@@ -108,7 +54,7 @@ class RecipeViewModel(
             image = image,
             ingredients = ingredientsList,
             instructions = instructionsList,
-            mealType = if(isVeg) listOf("Vegetarian") else listOf("Non Veg"),
+            mealType = dishTypes,
             readyInMinutes = readyInMinutes,
             isVeg = isVeg,
             isFavorite = isFavorite,

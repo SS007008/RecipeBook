@@ -27,7 +27,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 @Composable
-fun recipeApp(isDark : Boolean, navController: NavHostController){
+fun RecipeApp(isDark : Boolean, navController: NavHostController){
 
     val context = LocalContext.current
     val backStackEntry by navController.currentBackStackEntryAsState()
